@@ -1,31 +1,32 @@
 # speech_compass
 
-TODO(b/432460369): Add a description for your new project, explain what is
-being released here, etc... Additional, the following sections are normally
-expected for all releases. Feel free to add additional sections if appropriate
-for your project.
+This repository contains the code accompanying the publication
+**SpeechCompass: Enhancing Mobile Captioning with Diarization and Directional
+Guidance via Multi-Microphone Localization**,
+published in CHI, 2025. (https://arxiv.org/abs/2502.08848)
 
 ## Installation
 
-Write instructions for how the user should install your code. The instructions
-should ideally be valid when copy-pasted. You can combine this with the Usage
-section if there's no separate installation step.
+Setting up the whole system requires multiple steps and custom hardware. Refer
+to details in doc folder for each step:
 
-## Usage
+1) Custom hardware. The microphone phone-case was custom designed.
 
-Write example usage of your code. The instructions should ideally be valid when
-copy-pasted, and will be used by your technical reviewer to verify that your
-package functions correctly.
+2) Firmware. The phone-case microcontroller needs to be flashed with firmware
+
+2) DSP algorithms. The core processing algorithms were developed in light-weight
+C to be platform agnostic. They can be tested separately.
+
+3) Android application. The app was developed in Android studio
 
 ## Citing this work
 
-Add citation details here, usually a pastable BibTeX snippet:
-
 ```
-@article{publicationname,
-      title={Publication Name},
-      author={Author One and Author Two and Author Three},
-      year={2025},
+@inproceedings{dementyev2025speechcompass,
+  title={SpeechCompass: Enhancing Mobile Captioning with Diarization and Directional Guidance via Multi-Microphone Localization},
+  author={Dementyev, Artem and Kanevsky, Dimitri and Yang, Samuel and Parvaix, Mathieu and Lai, Chiong and Olwal, Alex},
+  booktitle={Proceedings of the 2025 CHI Conference on Human Factors in Computing Systems},
+  year={2025}
 }
 ```
 
