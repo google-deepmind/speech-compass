@@ -14,14 +14,14 @@
 // ==============================================================================
 
 /* GCC-PHAT tests. */
-#include "third_party/deepmind/speech_compass/dsp/gcc_phat.h"
+#include "speech_compass/dsp/gcc_phat.h"
 
 #include <math.h>
 #include <stdio.h>
 #include <stdlib.h>
 
-#include "third_party/audio_to_tactile/src/dsp/complex.h"
-#include "third_party/deepmind/speech_compass/utility/logging.h"
+#include "audio_to_tactile/src/dsp/complex.h"
+#include "speech_compass/utility/logging.h"
 
 // Generates a random value uniformly in [0, 1].
 static float rand_unif(void) { return (float)rand() / RAND_MAX; }
