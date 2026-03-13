@@ -24,7 +24,7 @@ Building the app is more involved, especially for first time users.
 [Android studio](https://developer.android.com/studio).
 
 2) Download the
-[zipped](https://drive.google.com/file/d/1jFQJekD14Jx-xwWLs2wC-8Qwh1GPZKnF/view?resourcekey=0-wajrcNOpDrbjtKxqiirDPg)
+[zipped](TODO)
 Android Studio project for SpeechCompass.
 
 3) Import the project to Android Studio.
