@@ -3,7 +3,6 @@
 The hardware is composed of two PCBs: the main board with the microcontroller
 and flexible PCB connecting all the microphones together.
 
-[TOC]
 
 ![Phone case](https://github.com/google-deepmind/speech_compass/blob/main/docs/images/electronics.jpg) 
 
