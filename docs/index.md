@@ -33,14 +33,10 @@ The ASR and visualizations runs as an app on the phone. It actually uses phone
 microphone for the ASR and receives the sound direction from the phone case over
 USB. ![Phone case](images/app.jpg)
 
-## License
-
-This code uses the Apache License 2.0. See the
-[LICENSE](/third_party/deepmind/speech_compass/LICENSE) file for details.
 
 ## Documentation
 
-*   [Hardware](/third_party/deepmind/speech_compass/docs/hardware/index.md)
-*   [Firmware](/third_party/deepmind/speech_compass/docs/firmware/index.md)
-*   [Android application](/third_party/deepmind/speech_compass/docs/android/index.md)
-*   [DSP algorithms](/third_party/deepmind/speech_compass/docs/algorithms/index.md)
+*   [Hardware](https://github.com/google-deepmind/speech_compass/blob/main/docs/hardware/index.md) 
+*   [Firmware](https://github.com/google-deepmind/speech_compass/blob/main/docs/firmware/index.md)
+*   [Android application](https://github.com/google-deepmind/speech_compass/blob/main/docs/android/index.md)
+*   [DSP algorithms](https://github.com/google-deepmind/speech_compass/blob/main/docs/algorithms/index.md)
