@@ -16,13 +16,13 @@
 
 /* FAS beamformer tests. */
 
-#include "third_party/deepmind/speech_compass/beam/fas_beamformer.h"
+#include "speech_compass/beam/fas_beamformer.h"
 
 #include <math.h>
 #include <stdio.h>
 #include <stdlib.h>
 
-#include "third_party/deepmind/speech_compass/utility/logging.h"
+#include "speech_compass/utility/logging.h"
 
 #ifndef M_PI
 #define M_PI 3.14159265358979323846
