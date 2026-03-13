@@ -14,14 +14,14 @@
 // ==============================================================================
 
 /* DAS beamformer tests */
-#include "third_party/deepmind/speech_compass/beam/das_beamformer.h"
+#include "speech_compass/beam/das_beamformer.h"
 
 #include <math.h>
 #include <stdint.h>
 #include <stdio.h>
 #include <stdlib.h>
 
-#include "third_party/deepmind/speech_compass/utility/logging.h"
+#include "speech_compass/utility/logging.h"
 
 /* Test the conversion from degrees to delay samples. */
 static void TestConvertLocalDegeeToDelaySamples(void) {
