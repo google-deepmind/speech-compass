@@ -28,7 +28,7 @@ UIST demo [proceedings](https://dl.acm.org/doi/10.1145/3586182.3615789) for
 details). It is more bulky but it is simpler to build and uses microphones on a
 breakout boards. It can run the same firmware.
 
-![Phone case](/third_party/deepmind/speech_compass/docs/images/livelocalizer.png)
+![Phone case](https://github.com/google-deepmind/speech_compass/blob/main/docs/images/livelocalizer.png)
 
 ## Firmware
 
