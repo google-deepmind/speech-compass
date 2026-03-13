@@ -4,9 +4,9 @@ Defines c_binary, c_library, c_test rules for targets written in C. They are
 like their cc_* counterparts, but compile with C11 standard compatibility.
 """
 
-load("//third_party/bazel_rules/rules_cc/cc:cc_binary.bzl", "cc_binary")
-load("//third_party/bazel_rules/rules_cc/cc:cc_library.bzl", "cc_library")
-load("//third_party/bazel_rules/rules_cc/cc:cc_test.bzl", "cc_test")
+load("bazel_rules/rules_cc/cc:cc_binary.bzl", "cc_binary")
+load("bazel_rules/rules_cc/cc:cc_library.bzl", "cc_library")
+load("bazel_rules/rules_cc/cc:cc_test.bzl", "cc_test")
 
 CONDITION_WINDOWS = "//tools/cc_target_os:windows"
 
