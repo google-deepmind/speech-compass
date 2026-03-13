@@ -5,7 +5,7 @@ and flexible PCB connecting all the microphones together.
 
 [TOC]
 
-![Phone case](/third_party/deepmind/speech_compass/docs/images/electronics.jpg)
+![Phone case](https://github.com/google-deepmind/speech_compass/blob/main/docs/images/electronics.jpg) 
 
 ## Main PCB
 
