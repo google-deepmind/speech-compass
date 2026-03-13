@@ -8,7 +8,6 @@ dimension to sound understanding can greatly improve the usability of audio
 interfaces. For more details see our publication in
 [CHI'25](https://arxiv.org/pdf/2502.08848)
 
-[TOC]
 
 ![Phone case](images/speech_compass_teaser.jpg)
 
