@@ -14,13 +14,13 @@
 // ==============================================================================
 
 /* Angle estimation test */
-#include "third_party/deepmind/speech_compass/dsp/angle_estimation.h"
+#include "speech_compass/dsp/angle_estimation.h"
 
 #include <math.h>
 #include <stdio.h>
 #include <stdlib.h>
 
-#include "third_party/deepmind/speech_compass/utility/logging.h"
+#include "speech_compass/utility/logging.h"
 
 static const float kTol = 1e-5f;  // Allow some error tolerance with floats.
 
