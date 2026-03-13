@@ -13,13 +13,13 @@ The main PCB is a motherboard that has the STM32 microcontroller and I/O ports.
 The board includes an audio codec that provides headphone output. There is a
 Bluetooth module as well, but we are not using it. With Bluetooth and the
 battery, the system does not need to be tethered to the phone.
-[Schematic pdf](/third_party/deepmind/speech_compass/docs/hardware/main_board_schematic.pdf)
+[Schematic pdf](https://github.com/google-deepmind/speech_compass/blob/main/docs/hardware/main_board_schematic.pdf)
 
 ## Flex PCB
 
 Flexible PCB is mainly a cable to connect the microphones to the main board. The
 surface mount microphones were soldered to the flex PCB.
-[Schematic pdf](/third_party/deepmind/speech_compass/docs/hardware/flex_pcb_schematic.pdf)
+[Schematic pdf](https://github.com/google-deepmind/speech_compass/blob/main/docs/hardware/flex_pcb_schematic.pdf)
 
 ## Old version (LiveLocalizer)
 
