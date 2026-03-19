@@ -11,6 +11,8 @@ Artem Dementyev*, Dimitri Kanevsky, Samuel J. Yang, Mathieu Parvaix, Chiong Lai,
 Official code release for **SpeechCompass: Enhancing Mobile Captioning with Diarization and
 Directional Guidance via Multi-Microphone Localization**, published at CHI 2025.
 
+[Video 4:24](https://www.youtube.com/watch?v=crWXO5T5jaQ) | [Presentation 9:30](https://www.youtube.com/watch?v=cOnMxClQZ4g)
+
 ![SpeechCompass teaser](docs/images/speech_compass_teaser.jpg)
 
 <small>*First and last author contributed equally to this work</small>
