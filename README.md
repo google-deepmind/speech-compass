@@ -1,23 +1,36 @@
-# speech_compass
+# SpeechCompass
 
-This repository contains the code accompanying the publication
-**SpeechCompass: Enhancing Mobile Captioning with Diarization and Directional
-Guidance via Multi-Microphone Localization**,
-published in CHI, 2025. (https://arxiv.org/abs/2502.08848)
+[![CHI 2025 Best Paper](https://img.shields.io/badge/CHI%202025-Best%20Paper%20Award-gold)](https://dl.acm.org/doi/10.1145/3706598.3713631)
+[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](LICENSE)
+[![arXiv](https://img.shields.io/badge/arXiv-2502.08848-b31b1b.svg)](https://arxiv.org/abs/2502.08848)
 
-## Installation
+[Paper](https://arxiv.org/abs/2502.08848) | [ACM DL](https://dl.acm.org/doi/10.1145/3706598.3713631) | [Blog](https://research.google/blog/making-group-conversations-more-accessible-with-sound-localization/) | [Project Page](https://www.olwal.com/speechcompass)
 
-Setting up the whole system requires multiple steps and custom hardware. Refer
-to details in doc folder for each step:
+Official code release for **SpeechCompass: Enhancing Mobile Captioning with Diarization and
+Directional Guidance via Multi-Microphone Localization**, published at CHI 2025.
 
-1) Custom hardware. The microphone phone-case was custom designed.
+![SpeechCompass teaser](docs/images/speech_compass_teaser.jpg)
 
-2) Firmware. The phone-case microcontroller needs to be flashed with firmware
+## Overview
 
-2) DSP algorithms. The core processing algorithms were developed in light-weight
-C to be platform agnostic. They can be tested separately.
+SpeechCompass adds a spatial dimension to mobile speech-to-text by localizing speakers in
+360° using a custom 4-microphone phone case. A lightweight C localization pipeline runs on
+an embedded microcontroller, and an Android app displays directional captions with speaker
+diarization — making group conversations more accessible for people who are hard of hearing.
 
-3) Android application. The app was developed in Android studio
+![System diagram](docs/images/system_diagram.png)
+
+## Repository Structure
+
+| Component | Description |
+|-----------|-------------|
+| [`hardware/`](hardware/) | PCB schematics for the custom 4-microphone phone case |
+| [`firmware/`](firmware/) | STM32 L5 microcontroller firmware (GCC-PHAT localization → USB output) |
+| [`dsp/`](dsp/) | Platform-agnostic C localization and beamforming algorithms, with unit tests |
+| [`android/`](android/) | Android Studio app (speech-to-text + directional visualization) |
+
+Each component can be used independently — in particular, the DSP algorithms can be built
+and tested with Bazel without any hardware.
 
 ## Citing this work
 
