@@ -78,7 +78,7 @@ SpeechCompass combines a custom hardware phone case with lightweight on-device p
 | [`hardware/README.md`](hardware/README.md) | PCB schematics for the custom 4-microphone phone case |
 | [`firmware/README.md`](firmware/README.md) | STM32 L5 firmware (GCC-PHAT localization → USB output) |
 | [`dsp/README.md`](dsp/README.md) | Platform-agnostic C localization and beamforming algorithms, with Bazel unit tests |
-| [`android/README.md`](android/README.md) | Android Studio app (ASR + directional visualization) |
+| [`android/README.md`](android/README.md) | Android app with Android Studio project (ASR + directional visualization) |
 
 Each component can be used independently — in particular, the DSP algorithms can be built
 and tested with Bazel without any hardware.
