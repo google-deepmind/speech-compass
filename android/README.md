@@ -9,6 +9,8 @@ framework.
 
 ## Building from source
 
+### Android Studio
+
 1. Install the latest [Android Studio](https://developer.android.com/studio).
 
 2. Clone this repository and open the `android/` folder in Android Studio (**File → Open**).
@@ -17,10 +19,38 @@ framework.
 
 4. Connect the phone over USB and click **Run** to install and launch.
 
+### Windows command line
+
+The `scripts/windows/` folder provides batch scripts for building and installing
+without opening Android Studio. Requires Android Studio (for the bundled JDK)
+and `adb` on the PATH.
+
+**Build:**
+```
+scripts\windows\compile_debug.bat
+scripts\windows\compile_release.bat
+```
+
+**Install on device:**
+```
+scripts\windows\run_debug.bat
+scripts\windows\run_release.bat
+```
+
+If multiple devices are connected, you will be prompted to select one by name.
+
+**Wireless debugging** — run once with the device connected via USB:
+```
+scripts\windows\connect_wifi.bat
+```
+
+If the device was already paired via Android Studio wireless debugging,
+the USB cable is not needed.
+
 ## Installing a pre-built APK
 
-Pre-built APKs are attached to [GitHub Releases](../../releases). Download the latest
-`speechcompass.apk`, connect the phone to your PC, then sideload via ADB:
+Pre-built APKs are attached to [GitHub Releases](https://github.com/google-deepmind/speech-compass/releases).
+Download the latest `speechcompass.apk`, connect the phone to your PC, then sideload via ADB:
 
 ```
 adb install speechcompass.apk
