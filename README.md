@@ -86,24 +86,48 @@ and tested with Bazel without any hardware.
 ## Citing this work: SpeechCompass [ACM CHI 2025 Best Paper Award]
 
 ```bibtex
-@inproceedings{dementyev2025speechcompass,
-  title={SpeechCompass: Enhancing Mobile Captioning with Diarization and Directional Guidance via Multi-Microphone Localization},
-  author={Dementyev, Artem and Kanevsky, Dimitri and Yang, Samuel and Parvaix, Mathieu and Lai, Chiong and Olwal, Alex},
-  booktitle={Proceedings of the 2025 CHI Conference on Human Factors in Computing Systems},
-  year={2025}
+@inproceedings{10.1145/3706598.3713631,
+author = {Dementyev, Artem and Kanevsky, Dimitri and Yang, Samuel and Parvaix, Mathieu and Lai, Chiong and Olwal, Alex},
+title = {SpeechCompass: Enhancing Mobile Captioning with Diarization and Directional Guidance via Multi-Microphone Localization},
+year = {2025},
+isbn = {9798400713941},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/3706598.3713631},
+doi = {10.1145/3706598.3713631},
+booktitle = {Proceedings of the 2025 CHI Conference on Human Factors in Computing Systems},
+articleno = {73},
+numpages = {17},
+keywords = {Assistive technology, hearing accessibility, localization, diarization, microphone array, captioning},
+location = {
+},
+series = {CHI '25}
 }
 ```
 
-## Related Work: LiveLocalizer [UIST 2023 Adjunct Proceedings]
+## Previous Work: LiveLocalizer [UIST 2023 Adjunct Proceedings]
 
 SpeechCompass builds on **LiveLocalizer** (UIST 2023), which first demonstrated
 microphone-array localization augmenting mobile speech-to-text. The same hardware can run
 the SpeechCompass firmware.
-
-> Dementyev, A., Kanevsky, D., Yang, S., Parvaix, M., Lai, C., and Olwal, A.
-> "LiveLocalizer: Augmenting Mobile Speech-to-Text with Microphone Arrays, Optimized
-> Localization and Beamforming." *UIST 2023 Adjunct*, San Francisco, CA.
-> [ACM DL](https://dl.acm.org/doi/10.1145/3586182.3615789)
+```bibtex
+@inproceedings{10.1145/3586182.3615789,
+author = {Dementyev, Artem and Kanevsky, Dimitri and Yang, Samuel and Parvaix, Mathieu and Lai, Chiong and Olwal, Alex},
+title = {LiveLocalizer: Augmenting Mobile Speech-to-Text with Microphone Arrays, Optimized Localization and Beamforming},
+year = {2023},
+isbn = {9798400700965},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/3586182.3615789},
+doi = {10.1145/3586182.3615789},
+booktitle = {Adjunct Proceedings of the 36th Annual ACM Symposium on User Interface Software and Technology},
+articleno = {75},
+numpages = {3},
+keywords = {ASR, STT, Speech-to-text, accessibility, audio, beamforming, microphone array, speech},
+location = {San Francisco, CA, USA},
+series = {UIST '23 Adjunct}
+}
+```
 
 ## Acknowledgments
 
