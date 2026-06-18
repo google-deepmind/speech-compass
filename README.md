@@ -83,7 +83,7 @@ SpeechCompass combines a custom hardware phone case with lightweight on-device p
 Each component can be used independently — in particular, the DSP algorithms can be built
 and tested with Bazel without any hardware.
 
-## Citing this work
+## Citing this work: SpeechCompass [ACM CHI 2025 Best Paper Award]
 
 ```bibtex
 @inproceedings{dementyev2025speechcompass,
@@ -94,7 +94,7 @@ and tested with Bazel without any hardware.
 }
 ```
 
-## Related Work
+## Related Work: LiveLocalizer [UIST 2023 Adjunct Proceedings]
 
 SpeechCompass builds on **LiveLocalizer** (UIST 2023), which first demonstrated
 microphone-array localization augmenting mobile speech-to-text. The same hardware can run
