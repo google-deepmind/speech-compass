@@ -134,4 +134,15 @@ public class SpeechRecognizerManager {
 //    speechRecognizer.stopListening();
   }
 
+  public void destroy() {
+    Handler mainHandler = new Handler(context.getMainLooper());
+    mainHandler.post(() -> {
+      if (speechRecognizer != null) {
+        speechRecognizer.cancel();
+        speechRecognizer.destroy();
+        speechRecognizer = null;
+      }
+    });
+  }
+
 }

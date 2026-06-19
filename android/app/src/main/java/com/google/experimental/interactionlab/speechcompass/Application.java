@@ -506,6 +506,18 @@ public class Application extends PApplet implements RecognitionListener, UiToggl
   }
 
   @Override
+  public void pause() {
+    super.pause();
+    port.close();
+  }
+
+  @Override
+  public void resume() {
+    super.resume();
+    if (enableSerial) port.initialize(getContext());
+  }
+
+  @Override
   public boolean onUiToggleChange(UiToggle uiToggle) {
     println(uiToggle.getLabel());
 
