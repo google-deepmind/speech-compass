@@ -129,8 +129,10 @@ public class SpeechResult
     public static void startSpeech() {
     }
     public static void endSpeech() {
-        results.lastElement().text = SpeechResult.results.lastElement().getText() + ".";
-        results.lastElement().createLines();
+        synchronized (results) {
+            results.lastElement().text = SpeechResult.results.lastElement().getText() + ".";
+            results.lastElement().createLines();
+        }
     }
 
     public static void insert(String text, float angle, float confidence)
@@ -145,20 +147,23 @@ public class SpeechResult
     public static void replace(String text, float angle, float confidence)
     {
         SpeechResult s = new SpeechResult(text, angle, confidence);
-        SpeechResult toBeReplaced = results.get(results.size()-1);
         s.createLines();
-        newLines += max(0, s.lines.size() - toBeReplaced.lines.size());
-
-        results.remove(results.size()-1);
-        insert(s);
+        synchronized (results) {
+            SpeechResult toBeReplaced = results.get(results.size()-1);
+            newLines += max(0, s.lines.size() - toBeReplaced.lines.size());
+            results.remove(results.size()-1);
+            insert(s);
+        }
     }
 
     public static void insert(SpeechResult s)
     {
-        results.add(s);
-        if (results.size() > MAX_RESULTS)
-            for (int i = 0; i < results.size() - MAX_RESULTS; i++)
-                results.remove(0);
+        synchronized (results) {
+            results.add(s);
+            if (results.size() > MAX_RESULTS)
+                for (int i = 0; i < results.size() - MAX_RESULTS; i++)
+                    results.remove(0);
+        }
     }
 
 }

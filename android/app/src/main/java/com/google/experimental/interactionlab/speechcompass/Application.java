@@ -33,7 +33,7 @@ public class Application extends PApplet implements RecognitionListener, UiToggl
   private static final String LABEL_SPEECH_AIAI = "   AiAi";
   // Speech recognition
   private SpeechRecognizerManager speech;
-  boolean listening = false; // track state
+  volatile boolean listening = false; // track state
   int results = 0;
 
   // Serial port to connect to SpeechCompass board
@@ -76,7 +76,7 @@ public class Application extends PApplet implements RecognitionListener, UiToggl
   SensorBuffer rmsAngle = new SensorBuffer();
 
   SensorBuffer rmsShort = new SensorBuffer();
-  float rmsValue = -1;
+  volatile float rmsValue = -1;
   Ui ui;
 
   public static final String LABEL_ARROW = "   Arrow";
@@ -214,6 +214,7 @@ public class Application extends PApplet implements RecognitionListener, UiToggl
         //indent
         translate(width / 20, 0);
         //start with the most recent result and work upwards
+        synchronized (SpeechResult.results) {
         for (int i = SpeechResult.results.size() - 1; i >= 0; i--) {
           SpeechResult r = SpeechResult.results.get(i);
           if (r == null)
@@ -300,6 +301,7 @@ public class Application extends PApplet implements RecognitionListener, UiToggl
 
           previousAngle = angle;
         }
+        } // end synchronized (SpeechResult.results)
 
         popMatrix();
 
