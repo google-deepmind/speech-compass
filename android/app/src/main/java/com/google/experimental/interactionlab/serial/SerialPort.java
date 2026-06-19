@@ -36,13 +36,14 @@ public class SerialPort {
     try {
       port.open(connection);
     } catch (IOException e) {
-      System.err.println("couldn't open connection");
-      throw new RuntimeException(e);
+      System.err.println("couldn't open serial port: " + e.getMessage());
+      return null;
     }
     try {
       port.setParameters(115200, 8, UsbSerialPort.STOPBITS_1, UsbSerialPort.PARITY_NONE);
     } catch (IOException e) {
-      throw new RuntimeException(e);
+      System.err.println("couldn't configure serial port: " + e.getMessage());
+      return null;
     }
 
     return port;
@@ -66,13 +67,23 @@ public class SerialPort {
     try {
       len = port.read(response, 10);
     } catch (Exception e) {
-      // pn("[NOK]");
-      response = null;
-      throw new RuntimeException(e);
+      System.err.println("serial read error: " + e.getMessage());
+      return null;
     }
 
     // pn("[OK]");
     return new String(response, 0, len);
+  }
+
+  public void close() {
+    if (port != null) {
+      try {
+        port.close();
+      } catch (IOException e) {
+        System.err.println("error closing serial port: " + e.getMessage());
+      }
+      port = null;
+    }
   }
 
   public void p(String text)
