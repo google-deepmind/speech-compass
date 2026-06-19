@@ -18,7 +18,6 @@ import com.google.experimental.interactionlab.speech.SpeechRecognizerManager;
 import com.google.experimental.interactionlab.speech.SpeechRecognizerManager.SPEECH_RECOGNITION_ENGINE;
 import com.google.experimental.interactionlab.speech.SpeechResult;
 
-import com.google.experimental.interactionlab.speech.SpeechResult.SUMMARY_STATE;
 import com.google.experimental.interactionlab.ui.Ui;
 import com.google.experimental.interactionlab.ui.UiToggle;
 import com.google.experimental.interactionlab.ui.UiToggleListener;
@@ -86,15 +85,12 @@ public class Application extends PApplet implements RecognitionListener, UiToggl
 
   public static final String LABEL_TEST_DATA = "Test data";
   public static final String LABEL_SIMULATE_TRANSCRIPT = "Simulate transcript";
-  public static final String LABEL_SUMMARIZE = "Summarize";
 
-  public static final String OPENAI_API_KEY = ""; //TODO: Should load from local.properties
   private boolean showTranscript = true;
 
   private boolean doCorrectAngles = false;
 
-  //TODO: Reenable summary once we have a better way to manage API KEY
-  enum APP_STATE { TRANSCRIPT, SETTINGS }; //, SUMMARY };
+  enum APP_STATE { TRANSCRIPT, SETTINGS };
   APP_STATE state = APP_STATE.SETTINGS;
 
   Vector<Integer> sessionTimes = new Vector<>();
@@ -132,9 +128,6 @@ public class Application extends PApplet implements RecognitionListener, UiToggl
       case SETTINGS:
         drawUiSettings();
         break;
-      // case SUMMARY:
-      //   drawSummary();
-      //   break;
     }
 
     rmsAngle.add(angle);
@@ -322,40 +315,6 @@ public class Application extends PApplet implements RecognitionListener, UiToggl
 
     }
 
-  public void drawSummary()
-  {
-    //summary
-    pushMatrix();
-
-    colorMode(RGB, 255, 255, 255);
-
-    if (isFold)
-      translate(width / 2 + tdy, tdy * 2);
-    else
-      translate(tdy, tdy * 2);
-
-    if (SpeechResult.summaryProgress == SUMMARY_STATE.COMPLETE ) {
-      ArrayList<String> lines = (ArrayList<String>) SpeechResult.summary.getLines().clone();
-      //println(lines);
-      fill(230, 230, 20);
-
-      for (String s : lines) {
-        text(s, 0, 0);
-        translate(0, tdy);
-      }
-    }
-    else if (SpeechResult.summaryProgress == SUMMARY_STATE.PROCESSING) {
-      fill(100, 100, 100);
-      text("Summarizing...", 0, 0);
-    }
-    else {
-      fill(100, 100, 100);
-      textMode(CENTER);
-      text(" SpeechCompass \n          ❤       \nSummarization", 0, 0);
-    }
-
-    popMatrix();
-  }
   // --- Drawing | end ---
 
   public void drawRms()
@@ -521,8 +480,6 @@ public class Application extends PApplet implements RecognitionListener, UiToggl
     ui.add(LABEL_SIMULATE_TRANSCRIPT, this);
     ui.add("Correct angles", "doCorrectAngles");
     ui.add("Print verbose", "printVerbose");
-    // TODO: Reenable
-    // ui.add(LABEL_SUMMARIZE, this);
 
     ui.add("");
     ui.add("RECOGNITION [needs restart] __________ ");
@@ -586,8 +543,6 @@ public class Application extends PApplet implements RecognitionListener, UiToggl
           "I think we need to start by creating a prototype of the app. We can use the whiteboard to sketch out the user interface and some of the features.");
       SimulatedTranscript.push("World Talker", "Bhanu Guda", 48.813, 50.896,
           "Cool! I am excited to get started.");
-    } else if (uiToggle.getLabel().equals(LABEL_SUMMARIZE)) {
-      SpeechResult.summarize(OPENAI_API_KEY);
     }
     else if (uiToggle.getLabel().equals(LABEL_ARROW) && !uiToggle.get())
     {
@@ -690,7 +645,6 @@ public class Application extends PApplet implements RecognitionListener, UiToggl
       case KeyEvent.KEYCODE_Z: simulatedAngle -= 1; println(simulatedAngle); break;
       case KeyEvent.KEYCODE_U: ui.toggleVisibility(); break;
       case KeyEvent.KEYCODE_C: drawColoredText = !drawColoredText; break;
-      case KeyEvent.KEYCODE_S: SpeechResult.summarize(OPENAI_API_KEY); break;
       case KeyEvent.KEYCODE_R: showTranscript = !showTranscript; break;
 
       case KeyEvent.KEYCODE_T:

@@ -2,7 +2,6 @@ package com.google.experimental.interactionlab.speech;
 
 import static java.lang.Math.max;
 
-import com.google.experimental.interactionlab.ai.OpenAi;
 import java.util.ArrayList;
 
 import java.util.Vector;
@@ -21,10 +20,6 @@ public class SpeechResult
     ArrayList<Integer> lineTimes = new ArrayList<>();
 
     public static int screenWidth = -1;
-
-    // public final static int RESULTS_FOR_SUMMARY = 10;
-    // public static int countdownToSummary = RESULTS_FOR_SUMMARY;
-    public static SpeechResult summary = null;
 
     public static final int END_TRUNCATE_TIME = 1000; //discount angle changes in the last second
     // to account for transcription settling
@@ -66,9 +61,6 @@ public class SpeechResult
             this.angle = angles.get(ti / 2); //set this angle to the median for that interval
         }
     }
-
-    public static enum SUMMARY_STATE { NONE, PROCESSING, COMPLETE };
-    public static SUMMARY_STATE summaryProgress = SUMMARY_STATE.NONE;
 
     // --- static members and methods ---
 
@@ -167,35 +159,6 @@ public class SpeechResult
         if (results.size() > MAX_RESULTS)
             for (int i = 0; i < results.size() - MAX_RESULTS; i++)
                 results.remove(0);
-    }
-
-    public static void summarize(String API_KEY) {
-        summaryProgress = SUMMARY_STATE.PROCESSING;
-
-        new Thread(() -> {
-            ArrayList<String> text = new ArrayList<>();
-            for (SpeechResult result : results) {
-                float a = result.getAngle();
-                //          String t = a < 90 ? "Speaker 1: " : "Speaker 2";
-                String t = "";
-                t += result.getText();
-                text.add(t);
-            }
-
-            OpenAi ai = new OpenAi(API_KEY);
-            String sum = ai.summarize(text);
-            if (sum != null) {
-                System.out.println(">>>" + sum);
-                summary = new SpeechResult(sum, 0, 0);
-                summary.createLines();
-                summaryProgress = SUMMARY_STATE.COMPLETE;
-                // countdownToSummary = RESULTS_FOR_SUMMARY;
-
-            } else {
-                // countdownToSummary = 0;
-                summaryProgress = SUMMARY_STATE.NONE;
-            }
-        }).start();
     }
 
 }
