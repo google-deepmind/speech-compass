@@ -105,7 +105,7 @@ series = {CHI '25}
 }
 ```
 
-## Previous Work: LiveLocalizer [UIST 2023 Adjunct Proceedings]
+## Previous Work: LiveLocalizer [ACM UIST 2023 Adjunct Proceedings]
 
 SpeechCompass builds on **LiveLocalizer** (UIST 2023), which first demonstrated
 microphone-array localization augmenting mobile speech-to-text. The same hardware can run
