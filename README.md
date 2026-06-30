@@ -43,8 +43,7 @@ and tested with Bazel without any hardware.
 
 ## Demo video
 
-▶️ **[Watch the full 4:24 demo on YouTube](https://www.youtube.com/watch?v=crWXO5T5jaQ)** —
-the cleanest way to watch it end to end.
+▶️ **[Watch the full 4:24 demo on YouTube](https://www.youtube.com/watch?v=crWXO5T5jaQ)**
 
 The same video is also embedded below, split into 10 short chapters so it plays inline on
 GitHub (each chapter is also a quick way to jump to a specific topic).
