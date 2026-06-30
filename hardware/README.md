@@ -2,7 +2,7 @@
 
 The SpeechCompass phone case consists of two PCBs.
 
-![Electronics](https://github.com/google-deepmind/speech_compass/blob/main/docs/images/electronics.jpg)
+![Electronics](../docs/images/electronics.jpg)
 
 ## Demo
 
@@ -30,4 +30,4 @@ The original prototype used a single rigid PCB — bulkier but simpler to build,
 microphones on breakout boards. It runs the same firmware. See the
 [UIST 2023 demo paper](https://dl.acm.org/doi/10.1145/3586182.3615789) for details.
 
-![LiveLocalizer](https://github.com/google-deepmind/speech_compass/blob/main/docs/images/livelocalizer.png)
+![LiveLocalizer](../docs/images/livelocalizer.png)

@@ -5,7 +5,7 @@ The app runs on the phone. It uses the phone's built-in microphone for speech re
 Visualizations are built with the [Processing for Android](https://android.processing.org/)
 framework.
 
-![App screenshot](https://github.com/google-deepmind/speech_compass/blob/main/docs/images/app.jpg)
+![App screenshot](../docs/images/app.jpg)
 
 ## Demo
 
