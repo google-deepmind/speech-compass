@@ -7,6 +7,22 @@ framework.
 
 ![App screenshot](https://github.com/google-deepmind/speech_compass/blob/main/docs/images/app.jpg)
 
+## Demo
+
+Chapters from the [project demo video](../README.md#demo-video):
+
+**Transcripts diarized by direction**
+
+https://github.com/user-attachments/assets/6112df95-f870-410e-9ffa-ed4d674b14fa
+
+**Visualization customization**
+
+https://github.com/user-attachments/assets/a756192b-5d0b-4ae6-b0c1-60f5a0f14a97
+
+**Live demo and group conversation**
+
+https://github.com/user-attachments/assets/6d96438e-9292-4822-893e-d382fb6d08f2
+
 ## Building from source
 
 ### Android Studio

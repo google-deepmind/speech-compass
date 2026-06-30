@@ -4,6 +4,12 @@ The SpeechCompass phone case consists of two PCBs.
 
 ![Electronics](https://github.com/google-deepmind/speech_compass/blob/main/docs/images/electronics.jpg)
 
+## Demo
+
+Hardware overview, from the [project demo video](../README.md#demo-video):
+
+https://github.com/user-attachments/assets/a258669e-7d17-40f7-944d-476e6aeb129a
+
 ## Main PCB
 
 The main board hosts the STM32 L5 microcontroller, an audio codec (headphone output),

@@ -7,6 +7,18 @@ angle estimates to the phone over USB.
 The firmware source is provided as an STM32CubeIDE project. Loading it onto the MCU
 requires an ST-LINK programmer.
 
+## Demo
+
+Chapters from the [project demo video](../README.md#demo-video):
+
+**Localization algorithms**
+
+https://github.com/user-attachments/assets/05698126-cea5-4c1a-b424-8474153fb682
+
+**Technical evaluation**
+
+https://github.com/user-attachments/assets/d7b5b3a5-3ba8-4e4a-8903-f9badf0004fd
+
 ## Compiling
 
 1. Install [STM32Cube IDE](https://www.st.com/software/stm32cube-ide) and the ST-LINK
