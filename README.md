@@ -33,10 +33,10 @@ Directional Guidance via Multi-Microphone Localization**, published at CHI 2025.
 
 | Component | Description |
 |-----------|-------------|
-| [`/hardware`](/hardware) | PCB schematics for the custom 4-microphone phone case |
-| [`/firmware`](/firmware) | STM32 L5 firmware (GCC-PHAT localization → USB output) |
-| [`/dsp`](/dsp) | Platform-agnostic C localization and beamforming algorithms, with Bazel unit tests |
 | [`/android`](/android) | Android app with Android Studio project (ASR + directional visualization) |
+| [`/dsp`](/dsp) | Platform-agnostic C localization and beamforming algorithms, with Bazel unit tests |
+| [`/firmware`](/firmware) | STM32 L5 firmware (GCC-PHAT localization → USB output) |
+| [`/hardware`](/hardware) | PCB schematics for the custom 4-microphone phone case |
 
 Each component can be used independently — in particular, the DSP algorithms can be built
 and tested with Bazel without any hardware.
