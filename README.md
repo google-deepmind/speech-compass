@@ -148,6 +148,17 @@ SpeechCompass combines a custom hardware phone case with lightweight on-device p
 Each component can be used independently — in particular, the DSP algorithms can be built
 and tested with Bazel without any hardware.
 
+## Quick start
+
+- **Run the Android app** — open `android/` in Android Studio and run on a connected phone,
+  or sideload a pre-built APK from
+  [Releases](https://github.com/google-deepmind/speech-compass/releases).
+  Details and command-line build scripts: [`android/README.md`](android/README.md).
+- **Build & test the DSP algorithms** (no hardware required) — `bazel test //...`.
+  Details: [`dsp/README.md`](dsp/README.md).
+- **Build the hardware and firmware** — see [`hardware/README.md`](hardware/README.md)
+  and [`firmware/README.md`](firmware/README.md).
+
 ## Citing this work: SpeechCompass [ACM CHI 2025 Best Paper Award]
 
 ```bibtex
