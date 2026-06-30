@@ -33,10 +33,10 @@ Directional Guidance via Multi-Microphone Localization**, published at CHI 2025.
 
 | Component | Description |
 |-----------|-------------|
-| [`hardware/README.md`](hardware/README.md) | PCB schematics for the custom 4-microphone phone case |
-| [`firmware/README.md`](firmware/README.md) | STM32 L5 firmware (GCC-PHAT localization → USB output) |
-| [`dsp/README.md`](dsp/README.md) | Platform-agnostic C localization and beamforming algorithms, with Bazel unit tests |
-| [`android/README.md`](android/README.md) | Android app with Android Studio project (ASR + directional visualization) |
+| [`/hardware`](/hardware) | PCB schematics for the custom 4-microphone phone case |
+| [`/firmware`](/firmware) | STM32 L5 firmware (GCC-PHAT localization → USB output) |
+| [`/dsp`](/dsp) | Platform-agnostic C localization and beamforming algorithms, with Bazel unit tests |
+| [`/android`](/android) | Android app with Android Studio project (ASR + directional visualization) |
 
 Each component can be used independently — in particular, the DSP algorithms can be built
 and tested with Bazel without any hardware.
@@ -153,11 +153,11 @@ SpeechCompass combines a custom hardware phone case with lightweight on-device p
 - **Run the Android app** — open `android/` in Android Studio and run on a connected phone,
   or sideload a pre-built APK from
   [Releases](https://github.com/google-deepmind/speech-compass/releases).
-  Details and command-line build scripts: [`android/README.md`](android/README.md).
+  Details and command-line build scripts: [`/android`](/android).
 - **Build & test the DSP algorithms** (no hardware required) — `bazel test //...`.
-  Details: [`dsp/README.md`](dsp/README.md).
-- **Build the hardware and firmware** — see [`hardware/README.md`](hardware/README.md)
-  and [`firmware/README.md`](firmware/README.md).
+  Details: [`/dsp`](/dsp).
+- **Build the hardware and firmware** — see [`/hardware`](/hardware)
+  and [`/firmware`](/firmware).
 
 ## Citing this work: SpeechCompass [ACM CHI 2025 Best Paper Award]
 
