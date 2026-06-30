@@ -19,15 +19,27 @@ Directional Guidance via Multi-Microphone Localization**, published at CHI 2025.
 
 ## Contents
 
+- [Repository structure](#repository-structure)
 - [Demo video](#demo-video)
 - [Overview](#overview)
 - [System](#system)
-- [Repository structure](#repository-structure)
 - [Quick start](#quick-start)
 - [Citing this work](#citing-this-work-speechcompass-acm-chi-2025-best-paper-award)
 - [Previous work: LiveLocalizer](#previous-work-livelocalizer-acm-uist-2023-adjunct-proceedings)
 - [Acknowledgments](#acknowledgments)
 - [License and disclaimer](#license-and-disclaimer)
+
+## Repository Structure
+
+| Component | Description |
+|-----------|-------------|
+| [`hardware/README.md`](hardware/README.md) | PCB schematics for the custom 4-microphone phone case |
+| [`firmware/README.md`](firmware/README.md) | STM32 L5 firmware (GCC-PHAT localization → USB output) |
+| [`dsp/README.md`](dsp/README.md) | Platform-agnostic C localization and beamforming algorithms, with Bazel unit tests |
+| [`android/README.md`](android/README.md) | Android app with Android Studio project (ASR + directional visualization) |
+
+Each component can be used independently — in particular, the DSP algorithms can be built
+and tested with Bazel without any hardware.
 
 ## Demo video
 
@@ -135,18 +147,6 @@ SpeechCompass combines a custom hardware phone case with lightweight on-device p
   costs low
 - The **DSP algorithms** are written in portable C11 and can also run on phones with
   2+ built-in microphones, providing 180° localization without additional hardware
-
-## Repository Structure
-
-| Component | Description |
-|-----------|-------------|
-| [`hardware/README.md`](hardware/README.md) | PCB schematics for the custom 4-microphone phone case |
-| [`firmware/README.md`](firmware/README.md) | STM32 L5 firmware (GCC-PHAT localization → USB output) |
-| [`dsp/README.md`](dsp/README.md) | Platform-agnostic C localization and beamforming algorithms, with Bazel unit tests |
-| [`android/README.md`](android/README.md) | Android app with Android Studio project (ASR + directional visualization) |
-
-Each component can be used independently — in particular, the DSP algorithms can be built
-and tested with Bazel without any hardware.
 
 ## Quick start
 
