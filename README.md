@@ -1,48 +1,3 @@
-
-
-
-
-
-
-https://github.com/user-attachments/assets/dbd1838f-e6db-4ffa-a19c-c1b5d6db9504
-
-
-
-https://github.com/user-attachments/assets/9ed959ff-d6ac-4c90-bbb2-d8c27430b7b1
-
-
-
-https://github.com/user-attachments/assets/f19941e5-d6bd-444e-8777-cb70e091ce91
-
-
-
-https://github.com/user-attachments/assets/d7b5b3a5-3ba8-4e4a-8903-f9badf0004fd
-
-
-
-https://github.com/user-attachments/assets/05698126-cea5-4c1a-b424-8474153fb682
-
-
-
-https://github.com/user-attachments/assets/6d96438e-9292-4822-893e-d382fb6d08f2
-
-
-
-https://github.com/user-attachments/assets/a756192b-5d0b-4ae6-b0c1-60f5a0f14a97
-
-
-
-https://github.com/user-attachments/assets/6112df95-f870-410e-9ffa-ed4d674b14fa
-
-
-
-https://github.com/user-attachments/assets/a258669e-7d17-40f7-944d-476e6aeb129a
-
-
-
-https://github.com/user-attachments/assets/e95b8f83-9143-4756-a023-5a3fdb9caa03
-
-
 # SpeechCompass: Enhancing Mobile Captioning with Diarization and Directional Guidance via Multi-Microphone Localization
 
 [![CHI 2025 Best Paper](https://img.shields.io/badge/CHI%202025-Best%20Paper%20Award-gold)](https://dl.acm.org/doi/10.1145/3706598.3713631)
@@ -58,9 +13,74 @@ Directional Guidance via Multi-Microphone Localization**, published at CHI 2025.
 
 [Video 4:24](https://www.youtube.com/watch?v=crWXO5T5jaQ) | [Presentation 9:30](https://www.youtube.com/watch?v=cOnMxClQZ4g)
 
-![SpeechCompass teaser](docs/images/speech_compass_teaser.jpg)
+[![SpeechCompass teaser](docs/images/speech_compass_teaser.jpg)](https://www.youtube.com/watch?v=crWXO5T5jaQ)
 
 <small>*First and last author contributed equally to this work</small>
+
+## Contents
+
+- [Demo video](#demo-video)
+- [Overview](#overview)
+- [System](#system)
+- [Repository structure](#repository-structure)
+- [Quick start](#quick-start)
+- [Citing this work](#citing-this-work-speechcompass-acm-chi-2025-best-paper-award)
+- [Previous work: LiveLocalizer](#previous-work-livelocalizer-acm-uist-2023-adjunct-proceedings)
+- [Acknowledgments](#acknowledgments)
+- [License and disclaimer](#license-and-disclaimer)
+
+## Demo video
+
+▶️ **[Watch the full 4:24 demo on YouTube](https://www.youtube.com/watch?v=crWXO5T5jaQ)** —
+the cleanest way to watch it end to end.
+
+The same video is also embedded below, split into 10 short chapters so it plays inline on
+GitHub (each chapter is also a quick way to jump to a specific topic).
+
+<details>
+<summary><b>Watch inline — 10 chapters (≈4:34 total)</b></summary>
+
+**1 · Introduction and problem** — 0:00
+
+https://github.com/user-attachments/assets/e95b8f83-9143-4756-a023-5a3fdb9caa03
+
+**2 · Hardware overview** — 0:24
+
+https://github.com/user-attachments/assets/a258669e-7d17-40f7-944d-476e6aeb129a
+
+**3 · Mobile UI: transcripts diarized by direction** — 0:43
+
+https://github.com/user-attachments/assets/6112df95-f870-410e-9ffa-ed4d674b14fa
+
+**4 · Mobile UI: customization** — 1:17
+
+https://github.com/user-attachments/assets/a756192b-5d0b-4ae6-b0c1-60f5a0f14a97
+
+**5 · Live demo and group conversation** — 1:29
+
+https://github.com/user-attachments/assets/6d96438e-9292-4822-893e-d382fb6d08f2
+
+**6 · Localization algorithms** — 1:48
+
+https://github.com/user-attachments/assets/05698126-cea5-4c1a-b424-8474153fb682
+
+**7 · Mobile UI and technical evaluation** — 2:08
+
+https://github.com/user-attachments/assets/d7b5b3a5-3ba8-4e4a-8903-f9badf0004fd
+
+**8 · Foundational large-scale study (n=263)** — 2:50
+
+https://github.com/user-attachments/assets/f19941e5-d6bd-444e-8777-cb70e091ce91
+
+**9 · Lab study (n=8) and large-scale survey (n=494)** — 3:51
+
+https://github.com/user-attachments/assets/9ed959ff-d6ac-4c90-bbb2-d8c27430b7b1
+
+**10 · Conclusions and future work** — 4:20
+
+https://github.com/user-attachments/assets/dbd1838f-e6db-4ffa-a19c-c1b5d6db9504
+
+</details>
 
 ## Overview
 
